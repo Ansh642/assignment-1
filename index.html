@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-section">
+            <div class="logo">
+                <img src="https://busy.in/images/logo.png" class="logo-image">
+            </div>
+        </div>
+            
+            <div class="date-selector">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M5.33333 1.33333V4M10.6667 1.33333V4M2 6.66667H14M3.33333 2.66667H12.6667C13.403 2.66667 14 3.26362 14 4V13.3333C14 14.0697 13.403 14.6667 12.6667 14.6667H3.33333C2.59695 14.6667 2 14.0697 2 13.3333V4C2 3.26362 2.59695 2.66667 3.33333 2.66667Z" stroke="#666" stroke-width="1.5"/>
+                </svg>
+                Date: FY 2023
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M3 4.5L6 7.5L9 4.5" stroke="#666" stroke-width="1.5"/>
+                </svg>
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="nav-item active">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 6L8 2L14 6V13C14 13.5523 13.5523 14 13 14H3C2.44772 14 2 13.5523 2 13V6Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Dashboard
+                </div>
+                <div class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 2V14M2 8H14" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Subscription
+                </div>
+                <div class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M12 14V12.6667C12 11.9594 11.719 11.2811 11.219 10.781C10.719 10.281 10.0406 10 9.33333 10H4.66667C3.95942 10 3.28115 10.281 2.78105 10.781C2.28095 11.2811 2 11.9594 2 12.6667V14M9.33333 4.66667C9.33333 6.13943 8.13943 7.33333 6.66667 7.33333C5.19391 7.33333 4 6.13943 4 4.66667C4 3.19391 5.19391 2 6.66667 2C8.13943 2 9.33333 3.19391 9.33333 4.66667Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Users
+                </div>
+                <div class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 10C10.2091 10 12 8.20914 12 6C12 3.79086 10.2091 2 8 2C5.79086 2 4 3.79086 4 6C4 8.20914 5.79086 10 8 10Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    My Profile
+                </div>
+                <div class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 4H14V12C14 12.5523 13.5523 13 13 13H3C2.44772 13 2 12.5523 2 12V4Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    UMS
+                </div>
+                <div class="nav-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 10.6667C9.47276 10.6667 10.6667 9.47276 10.6667 8C10.6667 6.52724 9.47276 5.33333 8 5.33333C6.52724 5.33333 5.33333 6.52724 5.33333 8C5.33333 9.47276 6.52724 10.6667 8 10.6667Z" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Settings
+                </div>
+                <div class="nav-item">Tab 1</div>
+            </nav>
+            
+            <div class="user-profile">
+                <img src="data:image/jpeg;base64,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" alt="Kamal Dhingra" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">Kamal Dhingra</div>
+                    <div class="user-role">Channel Partner</div>
+                </div>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M3 4.5L6 7.5L9 4.5" stroke="#666" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <div class="greeting">Good morning, Kamal!</div>
+                    <div class="page-title">Dashboard</div>
+                </div>
+                
+                <div class="header-center">
+                    <div class="search-container">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#999" stroke-width="1.5"/>
+                            <path d="M14 14L11.1 11.1" stroke="#999" stroke-width="1.5"/>
+                        </svg>
+                        <input type="text" placeholder="Search Serial Numbers" class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="credit-card">
+                        <div class="credit-header">
+                            <span>Credit Balance</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <circle cx="8" cy="8" r="7" stroke="#666" stroke-width="1.5"/>
+                                <path d="M8 4V8L10.5 10.5" stroke="#666" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="credit-amount">15,20,000</div>
+                        <div class="availability-bar">
+                            <div class="availability-text">Available 76%</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics-row">
+                <div class="metric-card">
+                    <div class="metric-title">Activations this month</div>
+                    <div class="metric-value green">250</div>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="info-icon">
+                        <circle cx="8" cy="8" r="7" stroke="#ccc" stroke-width="1.5"/>
+                        <path d="M8 11V8M8 5H8.01" stroke="#ccc" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-title">Purchases this month</div>
+                    <div class="metric-value orange">400</div>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="info-icon">
+                        <circle cx="8" cy="8" r="7" stroke="#ccc" stroke-width="1.5"/>
+                        <path d="M8 11V8M8 5H8.01" stroke="#ccc" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-title">Year on year comparison</div>
+                    <div class="metric-value green">15% ↑</div>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="info-icon">
+                        <circle cx="8" cy="8" r="7" stroke="#ccc" stroke-width="1.5"/>
+                        <path d="M8 11V8M8 5H8.01" stroke="#ccc" stroke-width="1.5"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <div class="sort-by">
+                        Sort By: Date
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M3 4.5L6 7.5L9 4.5" stroke="#666" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>ID</th>
+                            <th>Subscription Status</th>
+                            <th>Devices Purchased</th>
+                            <th>Account Credit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Booked ID 243<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                        <tr>
+                            <td>27<sup>th</sup> January 2023</td>
+                            <td>253</td>
+                            <td>Purchased Serial<br>13109045</td>
+                            <td>1</td>
+                            <td class="credit-cell">Less:<br>1080</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
