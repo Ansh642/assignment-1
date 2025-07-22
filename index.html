@@ -6,6 +6,9 @@
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
+
 </head>
 <body>
     
@@ -82,7 +85,9 @@
         
        
         <div class="main-content">
-            <div class="header">
+
+            <div class="header" style="margin-bottom: 0%;">
+                
                 <div class="header-left">
                     <div class="greeting">Good morning, Kamal!</div>
                     <div class="page-title">Dashboard</div>
@@ -97,40 +102,54 @@
                         <input type="text" placeholder="Search Serial Numbers" class="search-input">
                     </div>
                 </div>
-                
-                <div class="header-right">
-                    <div class="credit-card">
-                        <div class="credit-header">
-                            <span>Credit Balance</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <circle cx="8" cy="8" r="7" stroke="#666" stroke-width="1.5"/>
-                                <path d="M8 4V8L10.5 10.5" stroke="#666" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <div class="credit-amount">15,20,000</div>
-                        <div class="availability-bar">
-                            <div class="availability-text">Available 76%</div>
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+            
+                <div class="header-right " id="card1">
+                        <!-- This new container creates the gradient border -->
+                        <div class="card-container">
+                            <div class="credit-card">
+                            <div class="credit-header">
+                                <span>Credit Balance</span>
+                                <!-- Replaced the clock SVG with an info icon SVG -->
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="10" cy="10" r="8"/>
+                                    <line x1="10" y1="13" x2="10" y2="10" />
+                                    <line x1="10" y1="7" x2="10.01" y2="7" />
+                                </svg>
+                            </div>
+                            <div class="credit-amount">15,20,000</div>
+                            <div class="availability-bar">
+                                <!-- The text is now just for display, positioning is handled by CSS -->
+                                <div class="availability-text">Available 76%</div>
+                                <!-- The progress bar and fill create the visual bar -->
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="header-right">
-                    <div class="credit-card-1">
-                        <div class="credit-header">
-                            <span>Credit Used</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <circle cx="8" cy="8" r="7" stroke="#666" stroke-width="1.5"/>
-                                <path d="M8 4V8L10.5 10.5" stroke="#666" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <div class="credit-amount">4,80,000</div>
-                        <div class="availability-bar">
-                            <div class="availability-text">Used 24%</div>
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
+                <div class="header-right" id="card2" style="display: none;">
+                    <!-- This new container creates the gradient border -->
+                    <div class="card-container-1">
+                        <div class="credit-card-1">
+                            <div class="credit-header">
+                                <span>Credit Used</span>
+                                <!-- Replaced the clock SVG with an info icon SVG -->
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="10" cy="10" r="8"/>
+                                    <line x1="10" y1="13" x2="10" y2="10" />
+                                    <line x1="10" y1="7" x2="10.01" y2="7" />
+                                </svg>
+                            </div>
+                            <div class="credit-amount">4,80,000</div>
+                            <div class="availability-bar">
+                                <!-- The text is now just for display, positioning is handled by CSS -->
+                                <div class="availability-text-1">Used 24%</div>
+                                <!-- The progress bar and fill create the visual bar -->
+                                <div class="progress-bar">
+                                    <div class="progress-fill-1"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -142,125 +161,119 @@
                 <div class="metric-card">
                     <div class="metric-title">Activations this month</div>
                     <div class="metric-value green">250</div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="info-icon">
-                        <circle cx="8" cy="8" r="7" stroke="#ccc" stroke-width="1.5"/>
-                        <path d="M8 11V8M8 5H8.01" stroke="#ccc" stroke-width="1.5"/>
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" class="info-icon">
+                        <circle cx="8" cy="8" r="7" stroke="#6b7280" stroke-width="1.5"/>
+                        <path d="M8 11V7.5M8 5.5V5.51" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
-                </div>
+                    </div>
                 
                 <div class="metric-card">
                     <div class="metric-title">Purchases this month</div>
                     <div class="metric-value orange">400</div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="info-icon">
-                        <circle cx="8" cy="8" r="7" stroke="#ccc" stroke-width="1.5"/>
-                        <path d="M8 11V8M8 5H8.01" stroke="#ccc" stroke-width="1.5"/>
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" class="info-icon">
+                        <circle cx="8" cy="8" r="7" stroke="#6b7280" stroke-width="1.5"/>
+                        <path d="M8 11V7.5M8 5.5V5.51" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" />
                     </svg>
                 </div>
                 
                 <div class="metric-card">
                     <div class="metric-title">Year on year comparison</div>
                     <div class="metric-value green">15% ↑</div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="info-icon">
-                        <circle cx="8" cy="8" r="7" stroke="#ccc" stroke-width="1.5"/>
-                        <path d="M8 11V8M8 5H8.01" stroke="#ccc" stroke-width="1.5"/>
-                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" class="info-icon">
+                    <circle cx="8" cy="8" r="7" stroke="#6b7280" stroke-width="1.5"/>
+                    <path d="M8 11V7.5M8 5.5V5.51" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
                 </div>
             </div>
             
             <div class="table-container">
-                <div class="table-header">
-                    <div class="sort-by">
-                        Sort By: Date
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M3 4.5L6 7.5L9 4.5" stroke="#666" stroke-width="1.5"/>
-                        </svg>
-                    </div>
-                </div>
-                
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>ID</th>
-                            <th>Subscription Status</th>
-                            <th>Devices Purchased</th>
-                            <th>Account Credit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Booked ID 243<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                        <tr>
-                            <td>27<sup>th</sup> January 2023</td>
-                            <td>253</td>
-                            <td>Purchased Serial<br>13109045</td>
-                            <td>1</td>
-                            <td class="credit-cell">Less:<br>1080</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <table class="data-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>ID</th>
+                <th>Subscription Status</th>
+                <th>Devices Purchased</th>
+                <th>Account Credit</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Booked ID 243<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+            <tr>
+                <td>27<sup>th</sup> January 2023</td>
+                <td>253</td>
+                <td>Purchased Serial<br>13109045</td>
+                <td>1</td>
+                <td class="credit-cell">Less:<br>1080</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
         </div>
 
     </div>
