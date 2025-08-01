@@ -363,27 +363,20 @@ body {
 }
 
 .data-table th {
+    flex-direction: row;
     color: white;
-    padding: 16px;
-    text-align: left;
+    padding: 12px;
+    text-align: center;
     font-weight: 500;
+    justify-content: start;
     font-size: 14px;
 }
 
 .data-table td {
-    padding: 16px;
-    border-bottom: 1px solid #f3f4f6;
+    padding: 8px;
+    text-align: center;
     font-size: 14px;
     color: #111;
     font-weight: 600;
     color: #757474;
-}
-
-.credit-cell {
-    color: #e91515;
-    font-weight: 500;
-}
-
-sup {
-    font-size: 10px;
 }
